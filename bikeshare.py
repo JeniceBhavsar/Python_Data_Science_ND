@@ -2,11 +2,12 @@ import time
 import pandas as pd
 import numpy as np
 
+#data_files
 CITY_DATA = {'Chicago': 'chicago.csv',
              'New York City': 'new_york_city.csv',
              'Washington': 'washington.csv'}
 
-
+#filter
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -77,7 +78,7 @@ def load_data(city, month, day):
 
     return df
 
-
+#time_statistics
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -116,7 +117,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-
+#trip_duration
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
